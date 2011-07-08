@@ -1,0 +1,2 @@
+Usage:
+python sndlib2matplan.py input.xml > output.xml
