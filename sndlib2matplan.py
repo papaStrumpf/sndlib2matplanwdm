@@ -110,7 +110,7 @@ def main():
     cityList = getCityList(tree,namespace)
     for counter, city in enumerate(cityList):
         print "\t\t<node id=\""\
-            + str(counter)\
+            + str(counter+1)\
             + "\" nodeLevel=\"1\" nodeName=\""\
             + city["name"]\
             + "\" nodePopulation=\"#POP#\" nodeTimezone=\"1\" xCoord=\""\
@@ -143,11 +143,11 @@ def main():
             print >> sys.stderr, link["target"] + " not found in city list!"
         # write out
         print "\t\t<fibre id=\""\
-            + str(counter)\
+            + str(counter+1)\
             + "\" origNodeId=\""\
-            + str(source)\
+            + str(source+1)\
             + "\" destNodeId=\""\
-            + str(target)\
+            + str(target+1)\
             + "\" linkLengthInKm=\""\
             + str(int(calcGeoDistance(\
                 float(cityList[source]["y"]),\
